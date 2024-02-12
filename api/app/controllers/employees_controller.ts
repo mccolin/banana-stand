@@ -1,17 +1,13 @@
 import type { HttpContext } from '@adonisjs/core/http'
-import { DateTime } from 'luxon'
-import Product from '#models/product'
+import Employee from '#models/employee'
 
-export default class ProductsController {
+export default class EmployeesController {
   /**
    * Display a list of resource
    */
   async index({}: HttpContext) {
-    const products = await Product.all()
-    return {
-      "ts": DateTime.now(),
-      "products": products
-    }
+    const employees = await Employee.all()
+    return { "employees": employees }
   }
 
   /**
@@ -24,11 +20,11 @@ export default class ProductsController {
    */
   async show({ params }: HttpContext) {
     const id = params['id']
-    const product = await Product.findBy('id', id)
-    if (product)
+    const employee = await Employee.findBy('id', id)
+    if (employee)
       return {
         "success": true,
-        "product": product
+        "employee": employee
       }
     else
       return { "success": false }

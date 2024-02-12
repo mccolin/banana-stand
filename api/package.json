@@ -12,7 +12,7 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit"
-  },  
+  },
   "imports": {
     "#controllers/*": "./app/controllers/*.js",
     "#exceptions/*": "./app/exceptions/*.js",
@@ -58,6 +58,8 @@
     "@adonisjs/static": "^1.1.1",
     "@adonisjs/vite": "^2.0.2",
     "@vinejs/vine": "^1.7.1",
+    "adminjs": "^6.8.7",
+    "adminjs-adonis": "^1.2.0",
     "edge.js": "^6.0.1",
     "luxon": "^3.4.4",
     "pg": "^8.11.3",
